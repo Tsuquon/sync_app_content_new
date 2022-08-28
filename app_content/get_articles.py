@@ -10,7 +10,7 @@ def refresh_articles():
     records = cursor.fetchall()
 
     insertObject = []
-    columnNames = [column[0] for column in cursor.description]
+    columnNames = [column[0] for column in cur‹›sor.description]
 
     for record in records:
         insertObject.append( dict( zip( columnNames , record ) ) )
