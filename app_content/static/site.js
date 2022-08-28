@@ -59,8 +59,14 @@ target.innerHTML = '';
     	if(articleInds.indexOf(r) === -1) articleInds.push(r);
 	}
 	
-	
-for (var i = 0; i < 5; i ++) {
+	console.log(articleInds);
+console.dir(results);	
+	if (results.length < 30)		
+		articleInds = [];
+for (var i = 0; i < results.length; i ++)
+	articleInds.push(i);
+
+for (var i = 0; i < Math.min(results.length, 5); i ++) {
 	// gen tags
 	if(results[articleInds[i]].Keywords != null) {
 	var tags = results[articleInds[i]].Keywords.split(',');
